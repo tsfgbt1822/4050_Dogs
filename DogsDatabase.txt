@@ -1,1 +1,63 @@
-
+2
+Beagle
+Small to medium-sized breed known for its keen sense of smell and gentle disposition. Beagles are often used as detection dogs in airports for contraband items and food. They are friendly, energetic, and make excellent family pets.
+3
+German Shepherd
+Large, intelligent breed renowned for its loyalty, versatility, and trainability. German Shepherds are commonly used as police and military dogs due to their protective nature and ability to learn commands quickly. They excel in various roles, including search and rescue, therapy work, and as guide dogs for the visually impaired.
+2
+Golden Retriever
+Medium to large-sized breed with a friendly and tolerant attitude, making them excellent companions for families and individuals alike. Golden Retrievers are highly trainable and often employed as service dogs for people with disabilities. They are known for their love of water and retrieving abilities.
+1
+Chihuahua
+Small breed with a big personality, characterized by its tiny size and bold demeanor. Chihuahuas are fiercely loyal to their owners and can be quite courageous despite their diminutive stature. They are often seen as lap dogs and enjoy being the center of attention.
+1
+Dachshund
+Small breed with a long body, short legs, and distinctively elongated shape. Dachshunds were originally bred for hunting small game, such as badgers and rabbits, in their burrows. They are playful, curious, and known for their deep loyalty to their families.
+3
+Great Dane
+Giant breed known for its imposing size and gentle nature. Despite their large stature, Great Danes are often referred to as "gentle giants" due to their calm and affectionate temperament. They require ample space and regular exercise to stay healthy and happy.
+3
+Saint Bernard
+Massive breed originally bred for rescue work in the Swiss Alps. Saint Bernards are gentle, friendly, and patient, especially with children, making them wonderful family pets. They have a thick, dense coat to withstand cold temperatures and are known for their heroism in saving lives.
+3
+Newfoundland
+Large breed with a thick double coat and webbed feet, well-suited for water rescue and swimming. Newfoundland dogs are known for their calm and gentle disposition, often referred to as "nanny dogs" due to their protective nature towards children. They excel in water activities and are strong swimmers.
+3
+Bernese Mountain Dog
+Large and sturdy breed with a striking tri-colored coat of black, white, and rust. Bernese Mountain Dogs are known for their calm and affectionate demeanor, making them excellent family pets. They thrive in colder climates and enjoy outdoor activities like hiking and carting.
+3
+Irish Wolfhound
+Tall and wiry breed known for its impressive size and gentle nature. Irish Wolfhounds are one of the tallest dog breeds, with males often standing over 30 inches at the shoulder. Despite their imposing appearance, they are friendly and good-natured companions, though they require plenty of space to roam.
+1
+Pomeranian
+Small toy breed with a fluffy double coat and fox-like expression. Pomeranians are confident, extroverted dogs that often exhibit a larger-than-life personality. They are loyal companions and thrive on attention, though they can be prone to excessive barking if not properly trained.
+1
+Shih Tzu
+Small breed with a distinctive underbite and long, flowing coat. Shih Tzus are affectionate, outgoing dogs known for their friendly disposition and playful nature. They were originally bred as companion dogs for Chinese royalty and make loving pets for families and individuals alike.
+1
+Maltese
+Small toy breed with a luxurious white coat that hangs straight to the ground. Maltese dogs are gentle, affectionate, and adaptable companions, often forming strong bonds with their owners. They thrive on human companionship and are well-suited for apartment living due to their small size and minimal exercise needs.
+2
+Border Collie
+Medium-sized breed renowned for its intelligence, agility, and work ethic. Border Collies are highly trainable and excel in various canine sports, including agility, obedience, and herding trials. They require mental stimulation and physical exercise to prevent boredom and thrive in active households.
+2
+Labrador Retriever
+Medium to large-sized breed known for its friendly and outgoing nature. Labrador Retrievers are one of the most popular dog breeds due to their intelligence, trainability, and loyalty. They excel in various roles, including as service dogs, therapy dogs, and search and rescue dogs.
+2
+Australian Shepherd
+Medium-sized breed with a striking coat of blue or red merle and copper accents. Australian Shepherds are highly intelligent and energetic dogs known for their agility and herding instincts. They require plenty of mental and physical stimulation to prevent boredom and make loyal companions for active individuals and families.
+3
+Rottweiler
+Medium to large-sized breed with a robust and powerful build. Rottweilers are confident, loyal, and protective dogs known for their territorial nature and strong guarding instincts. With proper training and socialization, they can be affectionate family pets and excel in obedience and protection work.
+2
+Boxer
+Medium to large-sized breed with a strong, muscular build and distinctive pushed-in nose. Boxers are playful, energetic dogs known for their boundless enthusiasm and clownish antics. They are loyal companions and excellent with children, though they require early training and socialization to channel their exuberance appropriately.
+3
+Doberman Pinscher
+Medium to large-sized breed with a sleek, athletic build and distinctive cropped ears and docked tail. Doberman Pinschers are intelligent, loyal, and protective dogs known for their unwavering devotion to their families. They excel in various roles, including as guard dogs, service dogs, and companions for active individuals.
+2
+Cavalier King Charles Spaniel
+Small to medium-sized breed with a regal appearance and affectionate nature. Cavalier King Charles Spaniels are known for their gentle temperament and love of cuddling. They thrive on human companionship and make excellent pets for families, singles, and seniors alike.
+2
+Poodle
+Medium-sized breed with a curly, hypoallergenic coat and elegant appearance. Poodles are highly intelligent and trainable dogs known for their versatility and athleticism. They excel in various canine sports, including obedience, agility, and tracking, and come in three sizes: standard, miniature, and toy.
