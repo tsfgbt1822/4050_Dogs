@@ -55,7 +55,24 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      */
     @Override
     public void insert(DogRecord r) throws DictionaryException {
-        // Write this method
+        root = insertRec(root, r);
+    }
+
+    private Node insertRec(Node current, DogRecord r) throws DictionaryException {
+        if (current == null || current.isEmpty()) {
+            return new Node(r); // Creates a new node with the DogRecord
+        }
+
+        int comparison = current.getData().getDataKey().compareTo(r.getDataKey());
+        if (comparison == 0 && !current.isEmpty()) {
+            throw new DictionaryException("A record with the same key already exists");
+        } else if (comparison > 0) {
+            current.setLeftChild(insertRec(current.getLeftChild(), r));
+        } else {
+            current.setRightChild(insertRec(current.getRightChild(), r));
+        }
+
+        return current;
     }
 
     /**
@@ -67,7 +84,33 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      */
     @Override
     public void remove(DataKey k) throws DictionaryException {
-        // Write this method
+        root = removeRec(root, k);
+    }
+
+    private Node removeRec(Node current, DataKey k) throws DictionaryException {
+        if (current == null) {
+            throw new DictionaryException("No such record key exists");
+        }
+
+        int comparison = current.getData().getDataKey().compareTo(k);
+        if (comparison == 0) { // Node to be deleted found
+            // Node with only one child or no child
+            if (current.getLeftChild() == null)
+                return current.getRightChild();
+            else if (current.getRightChild() == null)
+                return current.getLeftChild();
+
+            // Node with two children: Get the inorder successor (smallest in the right subtree)
+            current.setData(smallest(current.getRightChild()));
+            // Delete the inorder successor
+            current.setRightChild(removeRec(current.getRightChild(), current.getData().getDataKey()));
+        } else if (comparison > 0) {
+            current.setLeftChild(removeRec(current.getLeftChild(), k));
+        } else {
+            current.setRightChild(removeRec(current.getRightChild(), k));
+        }
+
+        return current;
     }
 
     /**
@@ -80,9 +123,24 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      * @throws dogs.DictionaryException
      */
     @Override
-    public DogRecord successor(DataKey k) throws DictionaryException{
-        // Write this method
-        return null; // change this statement
+    public DogRecord successor(DataKey k) throws DictionaryException {
+        Node successor = null;
+        Node current = root;
+        while (current != null) {
+            int comparison = current.getData().getDataKey().compareTo(k);
+            if (comparison > 0) {
+                successor = current;
+                current = current.getLeftChild();
+            } else {
+                current = current.getRightChild();
+            }
+        }
+
+        if (successor == null) {
+            throw new DictionaryException("There is no successor for the given record key");
+        }
+
+        return successor.getData();
     }
 
    
@@ -96,9 +154,24 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      * @throws dogs.DictionaryException
      */
     @Override
-    public DogRecord predecessor(DataKey k) throws DictionaryException{
-        // Write this method
-        return null; // change this statement
+    public DogRecord predecessor(DataKey k) throws DictionaryException {
+        Node predecessor = null;
+        Node current = root;
+        while (current != null) {
+            int comparison = current.getData().getDataKey().compareTo(k);
+            if (comparison < 0) {
+                predecessor = current;
+                current = current.getRightChild();
+            } else {
+                current = current.getLeftChild();
+            }
+        }
+
+        if (predecessor == null) {
+            throw new DictionaryException("There is no predecessor for the given record key");
+        }
+
+        return predecessor.getData();
     }
 
     /**
@@ -108,9 +181,19 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      * @return
      */
     @Override
-    public DogRecord smallest() throws DictionaryException{
-        // Write this method
-        return null; // change this statement
+    public DogRecord smallest() throws DictionaryException {
+        if (isEmpty()) {
+            throw new DictionaryException("Dictionary is empty");
+        }
+        return smallest(root).getData();
+    }
+
+    private Node smallest(Node root) {
+        Node current = root;
+        while (current.hasLeftChild()) {
+            current = current.getLeftChild();
+        }
+        return current;
     }
 
     /*
@@ -118,9 +201,19 @@ public class OrderedDictionary implements OrderedDictionaryADT {
 	 * null if the dictionary is empty.
      */
     @Override
-    public DogRecord largest() throws DictionaryException{
-        // Write this method
-        return null; // change this statement
+    public DogRecord largest() throws DictionaryException {
+        if (isEmpty()) {
+            throw new DictionaryException("Dictionary is empty");
+        }
+        return largest(root).getData();
+    }
+
+    private Node largest(Node root) {
+        Node current = root;
+        while (current.hasRightChild()) {
+            current = current.getRightChild();
+        }
+        return current;
     }
       
     /* Returns true if the dictionary is empty, and true otherwise. */

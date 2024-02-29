@@ -154,19 +154,53 @@ public class DogsController implements Initializable {
     }
 
     public void first() {
-        // Write this method
+        try {
+            dog = database.smallest();
+            showDog();
+        } catch (DictionaryException ex) {
+            displayAlert("No dogs in the database");
+        }
     }
 
     public void last() {
-        // Write this method
+        try {
+            dog = database.largest();
+            showDog();
+        } catch (DictionaryException ex) {
+            displayAlert("No dogs in the database");
+        }
     }
 
     public void next() {
-        // Write this method;
+        if (dog != null) {
+            try {
+                DogRecord nextDog = database.successor(dog.getDataKey());
+                if (nextDog != null) {
+                    dog = nextDog;
+                    showDog();
+                } else {
+                    displayAlert("This is the last dog in the database");
+                }
+            } catch (DictionaryException ex) {
+                displayAlert("Unable to find the next dog");
+            }
+        }
     }
 
     public void previous() {
-        // Write this method
+        if (dog != null) {
+            try {
+                DogRecord previousDog = database.predecessor(dog.getDataKey());
+                if (previousDog != null) {
+                    dog = previousDog;
+                    showDog();
+                } else {
+                    displayAlert("This is the first dog in the database");
+                }
+            } catch (DictionaryException ex) {
+                displayAlert("Unable to find the previous dog");
+            }
+        }
     }
 
     public void play() {
@@ -178,7 +212,7 @@ public class DogsController implements Initializable {
         player.play();
     }
 
-    public void puase() {
+    public void pause() {
         play.setDisable(false);
         puase.setDisable(true);
         if (player != null) {
