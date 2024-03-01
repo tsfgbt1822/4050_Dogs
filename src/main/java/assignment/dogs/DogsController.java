@@ -111,7 +111,7 @@ public class DogsController implements Initializable {
         String img = dog.getImage();
         Image dogImage = new Image("file:src/main/resources/assignment/dogs/images/" + img);
         image.setImage(dogImage);
-        title.setText(dog.getDataKey().getdogName());
+        title.setText(dog.getDataKey().getDogName());
         about.setText(dog.getAbout());
     }
 
@@ -212,7 +212,7 @@ public class DogsController implements Initializable {
         player.play();
     }
 
-    public void pause() {
+    public void puase() {
         play.setDisable(false);
         puase.setDisable(true);
         if (player != null) {
