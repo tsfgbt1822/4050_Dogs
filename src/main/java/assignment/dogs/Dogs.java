@@ -35,4 +35,3 @@ public class Dogs extends Application {
         launch(args);
     }
 }
-
