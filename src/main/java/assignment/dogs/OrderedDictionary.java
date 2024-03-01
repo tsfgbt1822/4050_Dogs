@@ -60,7 +60,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
 
     private Node insertRec(Node current, DogRecord r) throws DictionaryException {
         if (current == null || current.isEmpty()) {
-            return new Node(r); // Creates a new node with the DogRecord
+            return new Node(r);
         }
 
         int comparison = current.getData().getDataKey().compareTo(r.getDataKey());
@@ -94,16 +94,13 @@ public class OrderedDictionary implements OrderedDictionaryADT {
 
         int comparison = current.getData().getDataKey().compareTo(k);
         if (comparison == 0) { // Node to be deleted found
-            // Node with only one child or no child
             if (current.getLeftChild() == null)
                 return current.getRightChild();
             else if (current.getRightChild() == null)
                 return current.getLeftChild();
 
-            // Node with two children: Get the inorder successor (smallest in the right subtree)
             DogRecord successorData = smallest(current.getRightChild()).getData();
             current.setData(successorData);
-            // Delete the inorder successor
             current.setRightChild(removeRec(current.getRightChild(), successorData.getDataKey()));
         } else if (comparison > 0) {
             current.setLeftChild(removeRec(current.getLeftChild(), k));
