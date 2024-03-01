@@ -16,3 +16,4 @@ module assignment.dogs {
     opens assignment.dogs to javafx.fxml;
     exports assignment.dogs;
 }
+
